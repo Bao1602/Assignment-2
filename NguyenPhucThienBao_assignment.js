@@ -141,17 +141,17 @@ let numArray = [20, 20, 11, 4, 11, 20, 2, 4];
 
 function uniqueNumber(arr){
     let uniqueNum ;
-    for(i = 0; i < arr.length; i++){
-        let count = 0;
-        for(j = 0; j < arr.length; j++){
-            if(arr[i] == arr[j]){
-                count++
+    arr.forEach((num) => {
+        count = 0 ;
+        arr.forEach((inNum) => {
+            if( num = inNum ){
+                count++;
             }
-        }
+        });
         if( count == 1  ){                                      //if the number happen only 1 then it's the unique number
             uniqueNum = arr[i];
         };
-    }
+    })
 
     return uniqueNum;
 }
